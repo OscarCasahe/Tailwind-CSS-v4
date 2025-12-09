@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="./output.css" rel="stylesheet" />
+    <script src="./assets/fontawesome/js/fontawesome.min.js"></script>
+    <script src="./assets/fontawesome/js/solid.min.js"></script>
+    <script>
+      window.onload = () => {
+        const mobileMenuIcon = document.getElementById("mobile-menu-items");
+
+        mobileMenuIcon.addEventListener("click", () => {
+          if (mobileMenuIcon.classList.contains("open")) {
+            mobileMenuIcon.classList.remove("open");
+          } else {
+            mobileMenuIcon.classList.add("open");
+          }
+        });
+
+        const ticketMenuItem = document.getElementById("ticket-menu-item");
+
+        ticketMenuItem.addEventListener("click", () => {
+          if (ticketMenuItem.classList.contains("open")) {
+            ticketMenuItem.classList.remove("open");
+          } else {
+            ticketMenuItem.classList.add("open");
+          }
+        });
+      };
+    </script>
+  </head>
+  <body>
+    <main>
+      <header class="text-zinc-200">
+        <nav class="sticky top-0 bg-linear-to-r from-rose-500 to-pink-500">
+          <div class="flex times-center p-2 gap-2">
+            <img src="./assets/images/logo-inverted.png" width="50" />
+            <div class="font-bold text-2xl pt-2">
+              tw:<span class="text-sky-900 font-quicksand">mf</span>
+            </div>
+
+            <div class="block md:hidden ml-auto pr-4 my-auto cursor-pointer">
+              <button id="mobile-menu-items" class="group peer">
+                <div
+                  class="top-0 bg-zinc-200 w-8 rounded-full h-1 mt-1 group-open:rotate-45 group-open:top-2 relative transition-all"
+                ></div>
+                <div
+                  class="opacity-100 bg-zinc-200 w-8 rounded-full h-1 mt-1 group-open:opacity-0"
+                ></div>
+                <div
+                  class="top-0 bg-zinc-200 w-8 rounded-full h-1 mt-1 group-open:-rotate-45 group-open:-top-2 relative transition-all"
+                ></div>
+              </button>
+              <div
+                class="absolute bg-linear-to-r from-rose-500 to-pink-500 peer-open:block hidden w-full left-0 top-[62px]"
+              >
+                <div
+                  class="relative flex h-full cursor-pointer items-center justify-center p-4 font-bold text-pink-200 transition-colors hover:bg-white/10 hover:text-zinc-200"
+                >
+                  <span>Home</span>
+                </div>
+                <div
+                  class="relative flex h-full cursor-pointer items-center justify-center p-4 font-bold text-pink-200 transition-colors hover:bg-white/10 hover:text-zinc-200"
+                >
+                  <span>Lineup</span>
+                </div>
+                <div
+                  class="group relative h-full cursor-pointer text-pink-200 transition-colors hover:bg-white/10 hover:text-zinc-200"
+                  id="ticket-menu-item"
+                >
+                  <div class="p-4 text-center font-bold">Tickets</div>
+                  <div class="hidden group-open:block">
+                    <div class="text-center p-4">
+                      <span
+                        class="relative text-pink-200 hover:bg-white/5 transition-colors ease-in-out"
+                        >Single day ticket</span
+                      >
+                    </div>
+
+                    <div class="text-center p-4">
+                      <span
+                        class="relative text-pink-200 hover:bg-white/5 transition-colors ease-in-out"
+                        >7 day ticket</span
+                      >
+                    </div>
+                  </div>
+                </div>
+                <div
+                  class="relative flex h-full cursor-pointer items-center justify-center p-4 font-bold text-pink-200 transition-colors hover:bg-white/10 hover:text-zinc-200"
+                >
+                  <span>Support</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="md:flex hidden flex-1 flex itmes-center justify-end">
+              <div class="menu-item">
+                <span>Home</span>
+              </div>
+              <div class="menu-item">
+                <span>Lineup</span>
+              </div>
+              <div class="menu-item group">
+                <span>Tickets</span>
+                <div
+                  class="group-hover:block hidden absolute top-full right-0 whitespace-nowrap rounded-b text-right bg-pink-500"
+                >
+                  <div class="acc-item">
+                    <span>Sigle day ticket</span>
+                  </div>
+                  <div class="acc-item">
+                    <span>7 day ticket</span>
+                  </div>
+                </div>
+              </div>
+              <div class="menu-item">
+                <span>Support</span>
+              </div>
+            </div>
+          </div>
+        </nav>
+
+        <div
+          class="flex text-center h-[calc(100vh-200px)] bg-cover bg-center bg-fixed min-h-[400px] bg-[url(./assets/images/hero.jpg)] flex-col items-center justify-center"
+        >
+          <div
+            class="bg-white/30 py-2 px-4 rounded-xl text-center backdrop-blur-md"
+          >
+            <div class="relative">
+              <img src="./assets/images/logo.png" width="175" />
+              <div class="flex items-center justify-center">
+                <div class="bg-pink-500 w-14 h-14 rounded-full flex items-center justify-center gap-1 mt-[-70px] mb-5">
+                  <div class="h-2 w-1 bg-pink-300 rounded-full  animate-wavey"></div>
+                  <div class="h-3 w-1 bg-pink-200 rounded-full  animate-wavey"></div>
+                  <div class="h-4 w-1 bg-pink-100 rounded-full  animate-wavey"></div>
+                  <div class="h-3 w-1 bg-pink-200 rounded-full  animate-wavey"></div>
+                  <div class="h-2 w-1 bg-pink-300 rounded-full  animate-wavey"></div>
+                </div>
+              </div>
+              <div class="text-5xl font-bold">
+                tw:<span class="text-sky-900 font-quicksand">mf</span>
+              </div>
+            </div>
+          </div>
+          <div class="font-bold mt-3 text-sm">
+            Keep me updated with news and promotions
+          </div>
+          <div class="mt-3 flex gpa-2">
+            <form class="mt-3 flex gap-2">
+              <input
+                type="email"
+                placeholder="Email"
+                class="rounded-sm border border-white/40 bg-white/30 backdrop-blur-md p-2 font-bold text-sky-900 placeholder-zinc-500 caret-pink-500 outline-pink-500 focus:outline"
+              />
+              <button
+                type="submit"
+                class="cursor-pointer rounded-sm bg-pink-500 py-2 px-4 font-bold transition-colors hover:bg-sky-900 hover:shadow-lg hover:shadow-black/20"
+              >
+                Subscribe
+              </button>
+            </form>
+          </div>
+        </div>
+      </header>
+    </main>
+  </body>
+</html>
