@@ -217,6 +217,9 @@
   .sticky {
     position: sticky;
   }
+  .-top-8 {
+    top: calc(var(--spacing) * -8);
+  }
   .top-0 {
     top: calc(var(--spacing) * 0);
   }
@@ -231,6 +234,9 @@
   }
   .left-0 {
     left: calc(var(--spacing) * 0);
+  }
+  .z-50 {
+    z-index: 50;
   }
   .container {
     width: 100%;
@@ -405,6 +411,9 @@
   }
   .overflow-x-auto {
     overflow-x: auto;
+  }
+  .scroll-smooth {
+    scroll-behavior: smooth;
   }
   .rounded-full {
     border-radius: calc(infinity * 1px);
